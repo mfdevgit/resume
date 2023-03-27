@@ -1,0 +1,30 @@
+{
+    "short_name": "Резюме Франко Максима",
+    "name": "Резюме Франко Максима, разработчика из Москвы",
+    "icons": [
+        {
+            "src": "logotypes/favicon.ico",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "logotypes/logotype_64.png",
+            "type": "image/png",
+            "sizes": "64x64"
+        },
+        {
+            "src": "logotypes/logotype_192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "logotypes/logotype_512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "hsl(200, 20%, 50%)",
+    "background_color": "#ffffff"
+}
