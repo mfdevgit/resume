@@ -145,20 +145,40 @@ span {
     }
 }
 .portfolio {
-    div {
+    > div {
         & + div {
             margin-top: 15px;
         }
-        a {
-            @include font;
-            display: inline-block;
-            padding: 10px;
+        > div {
+            @include flex;
             margin-bottom: 15px;
-            background-color: $light;
-            border-radius: 5px;
-            transition: all 150ms ease;
-            &:hover {
-                background-color: $light_darker;
+            a {
+                &.title {
+                    @include font;
+                    display: inline-block;
+                    padding: 10px;
+                    background-color: $light;
+                    border-radius: 5px 0 0 5px;
+                    transition: all 150ms ease;
+                    &:hover {
+                        background-color: $light_darker;
+                    }
+                }
+                &.github {
+                    display: inline-block;
+                    width: 44px;
+                    height: 44px;
+                    background-color: $light;
+                    background-image: url('../../public/images/github.svg');
+                    background-position: center;
+                    background-size: 24px;
+                    background-repeat: no-repeat;
+                    border-radius: 0 5px 5px 0;
+                    transition: all 150ms ease;
+                    &:hover {
+                        background-color: #6e5494;
+                    }
+                }
             }
         }
     }
