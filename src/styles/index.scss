@@ -31,7 +31,7 @@ span {
     @include flex($direction: column, $justify: center, $align: center);
     position: relative;
     height: 100vh;
-    background: url('../../public/bg.webp') center/cover no-repeat;
+    background: url('../../public/images/background.webp') center/cover no-repeat;
     &::before {
         content: '';
         position: absolute;
@@ -55,28 +55,36 @@ span {
     .link_container {
         z-index: 1;
         a {
+            display: inline-block;
             width: 40px;
+            height: 40px;
             & + a {
-                margin-left: 30px;
+                margin-left: 15px;
             }
-            svg {
-                width: 40px;
-                path {
-                    transition: all 150ms ease;
-                    fill: $dark;
-                }
-                &.github {
-                    &:hover {
-                        path {
-                            fill: #6e5494;
-                        }
+            path {
+                transition: all 150ms ease;
+                fill: $dark;
+            }
+            &[href^='https://github.com/']
+            {
+                &:hover {
+                    path {
+                        fill: hsl(265, 40%, 60%);
                     }
                 }
-                &.telegram {
-                    &:hover {
-                        path {
-                            fill: #0088cc;
-                        }
+            }
+            &[href^='https://t.me/']
+            {
+                &:hover {
+                    path {
+                        fill: hsl(200, 50%, 60%);
+                    }
+                }
+            }
+            &[href^='mailto'] {
+                &:hover {
+                    path {
+                        fill: hsl(5, 50%, 60%);
                     }
                 }
             }
@@ -164,19 +172,29 @@ span {
                         background-color: $light_darker;
                     }
                 }
-                &.github {
+                &[href^='https://github.com/']
+                {
                     display: inline-block;
                     width: 44px;
                     height: 44px;
+                    padding: 5px;
                     background-color: $light;
-                    background-image: url('../../public/images/github.svg');
-                    background-position: center;
-                    background-size: 24px;
-                    background-repeat: no-repeat;
                     border-radius: 0 5px 5px 0;
                     transition: all 150ms ease;
+                    svg {
+                        width: 34px;
+                        path {
+                            fill: $dark;
+                            transition: all 150ms ease;
+                        }
+                    }
                     &:hover {
-                        background-color: #6e5494;
+                        background-color: $light_darker;
+                        svg {
+                            path {
+                                fill: hsl(265, 40%, 40%);
+                            }
+                        }
                     }
                 }
             }
