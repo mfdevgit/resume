@@ -15,23 +15,21 @@ span {
     left: calc(50% - 100px);
 }
 .app {
-    @include screen('large') {
+    width: 100%;
+    @media (min-width: '1000px') {
         height: 100vh;
     }
-    width: 100%;
 }
 .left {
-    @include screen('medium') {
-        width: 100%;
-    }
-    @include screen('large') {
+    @include flex($direction: column, $justify: center, $align: center);
+    position: relative;
+    width: 100%;
+    @media (min-width: '1000px') {
         width: 50%;
         float: left;
     }
-    @include flex($direction: column, $justify: center, $align: center);
-    position: relative;
     height: 100vh;
-    background: url('../../public/images/background.webp') center/cover no-repeat;
+    background: url('../images/background.webp') center/cover no-repeat;
     &::before {
         content: '';
         position: absolute;
@@ -92,43 +90,25 @@ span {
     }
 }
 .right {
-    @include screen('small') {
-        padding: 60px 30px;
-    }
-    @include screen('medium') {
-        padding: 60px;
-    }
-    @include screen('large') {
+    width: 100%;
+    padding: 60px;
+    @media screen and (min-width: 1000px) {
         width: 50%;
         height: 100vh;
         overflow-y: scroll;
     }
     > div {
-        @include screen('small') {
-            @include flex($direction: column, $gap: 30px);
-        }
-        @include screen('medium') {
-            @include flex($gap: 60px);
-        }
+        @include flex($wrap: wrap, $gap: 30px);
         & + div {
             margin-top: 60px;
         }
         h2 {
             @include font($weight: bold, $align: center);
-            @include screen('small') {
-                width: 100%;
-            }
-            @include screen('medium') {
-                width: 150px;
-            }
+            flex: 0 1 120px;
+            margin: 0 auto;
         }
         > div {
-            @include screen('small') {
-                width: 100%;
-            }
-            @include screen('medium') {
-                width: calc(100% - 150px);
-            }
+            flex: 1 0 240px;
         }
     }
 }

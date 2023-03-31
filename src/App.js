@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import Left from './components/Left'
 import Loader from './components/Loader'
+import Left from './components/Left'
 import Right from './components/Right'
 
 export default function App() {

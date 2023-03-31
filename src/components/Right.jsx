@@ -23,7 +23,7 @@ export default function Right() {
                 <h2>Увлечения</h2>
                 <Hobby />
             </div>
-            <a href='/files/resume.pdf' target='_blanc' className='download'>
+            <a href='./resume.pdf' target='_blanc' className='download'>
                 Загрузить PDF
             </a>
         </div>
