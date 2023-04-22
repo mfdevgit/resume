@@ -28,16 +28,14 @@ export default function Portfolio() {
                     </a>
                 </div>
                 <p>
-                    Приятный <b>фронтенд</b> на React, использующий API для работы с бэкендом, где я собрал функционал для личного использования.
-                    Выложен на Vercel. На текущий момент есть генератор паролей, собрание градиентов, список задач (todo list).
+                    Приятный <b>фронтенд</b> на React, где я собрал функционал для личного использования. Выложен на Vercel. На текущий момент есть
+                    генератор паролей, собрание градиентов, список задач (todo list).
                 </p>
                 <div className='tags_container'>
                     <span>react</span>
-                    <span>axios</span>
                     <span>sass</span>
                     <span>helmet</span>
                     <span>spinners</span>
-                    <span>dotenv</span>
                 </div>
             </div>
             <div>
