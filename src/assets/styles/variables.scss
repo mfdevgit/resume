@@ -27,7 +27,7 @@ $bg_gradient: linear-gradient(90deg, $dark, $dark_lighter);
 $breakpoints: (
     'small': 0px,
     'medium': 520px,
-    'large': 1024px
+    'large': 1024px,
 );
 @mixin screen($size) {
     @media (min-width: map-get($breakpoints, $size)) {
